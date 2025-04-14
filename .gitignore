@@ -1,0 +1,50 @@
+# Binaries
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+
+# Output of go build
+/build/
+*.out
+
+# Go module files cache
+/pkg/
+vendor/
+
+# Logs
+*.log
+
+# IDEs and editors
+.vscode/
+.idea/
+*.swp
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Configuration
+.env
+.env.*
+
+# Coverage / testing
+coverage.*
+*.coverprofile
+
+# Temporary files
+*.tmp
+*.bak
+*.old
+
+# GitHub Codespaces
+.devcontainer/
+
+# Docker
+*.local
+docker-compose.override.yml
+
+# GoLand files
+*.iml
