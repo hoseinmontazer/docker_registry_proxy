@@ -44,4 +44,10 @@ go run main.go
 ```
 ---
 
-Let me know if you want a localized version (e.g., in Persian, Russian, etc.), a Dockerfile to containerize it, or a badge/CI integration added!
+## 📄 License
+
+This project is licensed under the **MIT License**.
+
+You are free to use, modify, and distribute this software with proper attribution — but please, **use it responsibly** and **never for malicious or unethical purposes**.
+
+See the [LICENSE](./LICENSE) file for full details.
