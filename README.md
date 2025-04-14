@@ -45,10 +45,3 @@ go run main.go
 ---
 
 Let me know if you want a localized version (e.g., in Persian, Russian, etc.), a Dockerfile to containerize it, or a badge/CI integration added!
-￼
-￼
-￼
-￼
-￼
-￼
-￼
