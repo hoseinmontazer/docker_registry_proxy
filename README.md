@@ -61,6 +61,30 @@ Pull images via the proxy by configuring your Docker daemon or client.
 docker pull registry.shirpala.ir/nginx:latest
 ```
 
+# Docker Configuration for Default Registry
+
+This guide explains how to configure Docker to use `registry.shirpala.ir` as the default registry.
+
+## Steps
+
+1. **Locate or Create the `daemon.json` File**
+
+   Docker's configuration is stored in a file called `daemon.json`. This file is usually located in one of the following paths:
+
+   - **Linux**: `/etc/docker/daemon.json`
+   - **Windows**: `C:\ProgramData\docker\config\daemon.json`
+   - **Mac**: `/etc/docker/daemon.json`
+
+2. **Edit the `daemon.json` File**
+
+   Open the `daemon.json` file with your preferred text editor. If it does not exist, create a new file. Add the following JSON configuration to set the default registry:
+
+   ```json
+   {
+     "registry-mirrors": ["https://registry.shirpala.ir"]
+   }
+   ```
+
 ## 📄 License
 
 This project is licensed under the **MIT License**.
