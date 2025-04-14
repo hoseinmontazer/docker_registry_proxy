@@ -43,6 +43,23 @@ I believe in **open access to technology and knowledge**, and this tool is a sma
 go run main.go
 ```
 ---
+## 🚀 Live Deployment
+
+- 🌐 **URL**: [https://registry.shirpala.ir](https://registry.shirpala.ir)
+- 📦 **API Proxying**: Supports Docker Registry HTTP API (`/v2/`)
+- 🔐 **Auth Handling**: Auto-handles token-based `Bearer` authentication
+
+---
+
+## 🧪 How to Use
+
+Pull images via the proxy by configuring your Docker daemon or client.
+
+### Example: Manual Pull via Proxy
+
+```bash
+docker pull registry.shirpala.ir/nginx:latest
+```
 
 ## 📄 License
 
