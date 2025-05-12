@@ -51,6 +51,7 @@ func ProxyDockerRequest(w http.ResponseWriter, r *http.Request, dockerPath strin
 		req.Header.Set("Authorization", "Bearer "+token)
 		req.Header.Set("Accept", r.Header.Get("Accept"))
 
+		// logger.Info("Retrying with Authorization header: %s", req.Header.Get("Authorization"))
 		resp, err = http.DefaultClient.Do(req)
 		if err != nil {
 			logger.Error("Upstream retry failed: %v", err)
@@ -58,6 +59,8 @@ func ProxyDockerRequest(w http.ResponseWriter, r *http.Request, dockerPath strin
 			return
 		}
 		defer resp.Body.Close()
+		// logger.Info("Retry successful, status code: %d", resp.StatusCode)
+
 	}
 
 	copyResponse(w, resp)
