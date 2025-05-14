@@ -29,10 +29,16 @@ func RegistryHandler() http.HandlerFunc {
 
 		// Only insert "library/" if it's a single-part image (like "nginx")
 		if len(segments) >= 2 && !strings.Contains(segments[0], "/") && !strings.Contains(segments[0], ".") {
-			if len(segments) == 2 { // Example: /v2/nginx/manifests/latest
+			if len(segments) == 3 { // Example: /v2/nginx/manifests/latest
 				segments[0] = "library/" + segments[0]
 			}
 		}
+
+		// // If image is a top-level (official) image like "postgres", rewrite to "library/postgres"
+		// if len(segments) >= 2 && !strings.Contains(segments[0], "/") && !strings.Contains(segments[0], ".") {
+		// 	fmt.Println("seg --- >", segments, len(segments))
+		// 	// segments[0] = "library/" + segments[0]
+		// }
 
 		dockerPath := "/v2/" + strings.Join(segments, "/")
 
